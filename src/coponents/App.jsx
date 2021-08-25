@@ -1,14 +1,15 @@
-import Painting from './Painting';
+import Section from './Section';
+import PaintingList from './PaintingList';
 import paintings from '../paintings.json';
 
 export default function App() {
   return (
-    <Painting
-      imageUrl={paintings[0].url}
-      title={paintings[0].title}
-      authorName={paintings[0].author.tag}
-      authorUrl={paintings[0].author.url}
-      price={paintings[0].price}
-    />
+    <div>
+      <Section title="Top of the week">
+        <PaintingList items={paintings} />
+      </Section>
+      <Section />
+      <Section />
+    </div>
   );
 }
