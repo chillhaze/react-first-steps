@@ -28,7 +28,11 @@ const Painting = props => {
 Painting.propTypes = {
   authorName: PropTypes.string.isRequired,
   authorUrl: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string,
+  imageUrl: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.bool.isRequired,
+    PropTypes.number.isRequired,
+  ]),
   price: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
