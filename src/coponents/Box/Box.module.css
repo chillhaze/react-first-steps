@@ -1,0 +1,8 @@
+/* Переменные в моддулях */
+@value defWidth: 100px;
+
+.box {
+  height: 100px;
+  width: defWidth;
+  background-color: #ccc;
+}
